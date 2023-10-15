@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Increment/Decrement App</title>
+</head>
+<body>
+  <h1>Increment/Decrement App</h1>
+  <p>Count: <span id="count">0</span></p>
+  <button id="incrementButton">Increment</button>
+  <button id="decrementButton">Decrement</button>
+
+  <script>
+    const countElement = document.getElementById("count");
+    const incrementButton = document.getElementById("incrementButton");
+    const decrementButton = document.getElementById("decrementButton");
+
+    let count = 0;
+
+    function updateCount() {
+      countElement.textContent = count;
+    }
+
+    function increment() {
+      count++;
+      updateCount();
+    }
+
+    function decrement() {
+      count--;
+      updateCount();
+    }
+
+    incrementButton.addEventListener("click", increment);
+    decrementButton.addEventListener("click", decrement);
+  </script>
+</body>
+</html>
